@@ -1,0 +1,46 @@
+@use 'red' as r;
+@use 'blue' as b;
+@use 'green' as g;
+@use 'function';
+$red: r.$my-red;
+$blue: b.$my-blue;
+$green: g.$my-green;
+
+
+@mixin article-card($color, $border-color, $font-size) {
+    color: $color;
+    border: 1px solid $border-color;
+    font-size: $font-size;
+}
+
+body {
+    div {
+        border: function.toRem(1px) solid $red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: function.toRem(13px);
+        gap: function.toRem(8px);
+        h1 {
+            color: $green;
+            border-bottom: 1px solid $blue;
+        }
+        .main {
+            display: flex;
+            article {
+                text-align: center;
+            }
+            .blue {
+                @include article-card($blue, $green, function.toRem(16px));
+            }
+            .red {
+                @include article-card($red, $green, function.toRem(16px));
+            }
+        }
+        .footer {
+            @include article-card($green, $blue, function.toRem(24px));
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

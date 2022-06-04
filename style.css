@@ -1,0 +1,49 @@
+body {
+  color: red;
+}
+
+body {
+  color: blue;
+}
+
+body {
+  color: green;
+}
+
+body div {
+  border: "0.0625pxrem" solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: "0.8125pxrem";
+  gap: "0.5pxrem";
+}
+body div h1 {
+  color: green;
+  border-bottom: 1px solid blue;
+}
+body div .main {
+  display: flex;
+}
+body div .main article {
+  text-align: center;
+}
+body div .main .blue {
+  color: blue;
+  border: 1px solid green;
+  font-size: "1pxrem";
+}
+body div .main .red {
+  color: red;
+  border: 1px solid green;
+  font-size: "1pxrem";
+}
+body div .footer {
+  color: green;
+  border: 1px solid blue;
+  font-size: "1.5pxrem";
+  width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
